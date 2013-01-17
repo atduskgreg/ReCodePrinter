@@ -1,5 +1,5 @@
 .bundle/
-credentials.yml
+credentials.rb
 *.dat
 .DS_Store
 .rvmrc
