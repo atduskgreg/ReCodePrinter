@@ -15,7 +15,7 @@
         "label": "Choose your ReCodePrinter edition",
         "options": [
           ["Processing Puzzle (only the original art: image, title, and artist. Figure out how to recode it yourself in Processing! Or just display the original around your home.)","original"],
-          ["Code and ReCode (includes one recoded piece, the original it was modeled on, and its Processing source code. Learn some Processing tricks each time.)","recode"],
+          ["Code and ReCode (includes one recoded piece, the original it was modeled on, and its Processing source code. Learn some Processing tricks each time.)","recode"]
         ]
       }
     ]
