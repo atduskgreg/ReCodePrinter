@@ -7,6 +7,7 @@ require 'dm-migrations'
 require 'dm-types'
 require 'httparty'
 require 'open-uri'
+require 'date'
 
 DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_ROSE_URL'] || 'postgres://localhost/recode_printer')
 
@@ -18,6 +19,7 @@ class Piece
   property :id, Serial
   property :delivery_order, Integer
 
+  property :original_piece_id, String
   property :title, Text
   property :artist, Text
   property :year, Integer
@@ -26,6 +28,9 @@ class Piece
   property :recoder, Text
   property :recode_image_url, Text
   property :recode_source_code, Text
+  property :recode_id, String
+  property :recode_created_at, DateTime
+
 
   def self.import_from_json!
   	json = open(RECODE_DATA_URL).read
@@ -41,10 +46,13 @@ class Piece
   			:artist => recoded["artist"],
   			:year => recoded["year"].to_i,
   			:original_piece_url => recoded["orig_img_url"],
+        :original_piece_id => recoded["id"],
 
   			:recoder => recoded["recodes"][0]["author"],
   			:recode_image_url => recoded["recodes"][0]["recode_img_url"],
   			:recode_source_code => open(recoded["recodes"][0]["pde_link"]).read,
+        :recode_id => recoded["recodes"][0]["id"],
+        :recode_created_at => DateTime.parse(recoded["recodes"][0]["timestamp"]),
 
   			:delivery_order => i+1
   		)
