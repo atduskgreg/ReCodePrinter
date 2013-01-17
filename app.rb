@@ -8,7 +8,12 @@ get '/' do
 end
 
 get '/edition' do
-	@piece = Piece.first :delivery_order => params[:delivery_count].to_i
+	delivery = 2
+	if params[:delivery_count]
+		delivery = params[:delivery_count].to_i
+	end
+
+	@piece = Piece.first :delivery_order => delivery
 	etag @piece.delivery_order
 	erb :edition
 end
