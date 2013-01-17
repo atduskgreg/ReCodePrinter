@@ -6,18 +6,18 @@
   "delivered_on":"wednesdays",
   "external_configuration": false,
   "send_timezone_info": false,
-  "send_delivery_count": true,
-  "config": {
-    "fields": [
-      {
-        "type": "radio",
-        "name": "edition_type",
-        "label": "Choose your ReCodePrinter edition",
-        "options": [
-          ["Processing Puzzle (only the original art: image, title, and artist. Figure out how to recode it yourself in Processing! Or just display the original around your home.)","original"],
-          ["Code and ReCode (includes one recoded piece, the original it was modeled on, and its Processing source code. Learn some Processing tricks each time.)","recode"]
-        ]
-      }
-    ]
-  }
+  "send_delivery_count": true
+  // "config": {
+  //   "fields": [
+  //     {
+  //       "type": "radio",
+  //       "name": "edition_type",
+  //       "label": "Choose your ReCodePrinter edition",
+  //       "options": [
+  //         ["Processing Puzzle (only the original art: image, title, and artist. Figure out how to recode it yourself in Processing! Or just display the original around your home.)","original"],
+  //         ["Code and ReCode (includes one recoded piece, the original it was modeled on, and its Processing source code. Learn some Processing tricks each time.)","recode"]
+  //       ]
+  //     }
+  //   ]
+  // }
 }
