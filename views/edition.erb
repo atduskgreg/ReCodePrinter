@@ -1,0 +1,22 @@
+<style>
+.code {
+	width: 374px; /* pub is 384 */
+	white-space: pre-wrap;
+}
+img {
+	width:300px;
+}
+</style>
+
+<div class="piece">
+
+<img src="<%= @piece.original_piece_url %>" />
+<p><b><%= @piece.title %></b><br/>
+<em><%= @piece.artist %> - <%= @piece.year %></em>	
+</p>
+<img src="<%= @piece.recode_image_url %>" />
+<p><em>Recoded by <%= @piece.recoder %></em></p>
+<div class="code">
+	<%= @piece.recode_source_code %>
+</div>
+</div>

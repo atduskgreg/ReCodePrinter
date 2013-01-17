@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+.code {
+	width: 300px;
+	white-space: pre-wrap;
+}
+img {
+	width:300px;
+}
+</style>
+</head>
+
+<body>
+	
+	<% for piece in @pieces %>
+		<div class="piece">
+
+	<img src="<%= piece.original_piece_url %>" />
+	<p><b><%= piece.title %></b><br/>
+	<em><%= piece.artist %>	 - <%= piece.year %></em>	
+	</p>
+	<img src="<%= piece.recode_image_url %>" />
+	<p><em>Recoded by <%= piece.recoder %></em></p>
+	<div class="code">
+		<%= piece.recode_source_code %>
+	</div>
+	</div>
+
+	<% end %>
+</body>
+
+</html>

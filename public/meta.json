@@ -1,0 +1,23 @@
+{
+  "owner_email":"greg.borenstein@gmail.com",
+  "publication_api_version":"1.0",
+  "name": "ReCode Printer",
+  "description": "ReCoded computer art classics.",
+  "delivered_on":"wednesdays",
+  "external_configuration": false,
+  "send_timezone_info": false,
+  "send_delivery_count": true,
+  "config": {
+    "fields": [
+      {
+        "type": "radio",
+        "name": "edition_type",
+        "label": "Choose your ReCodePrinter edition",
+        "options": [
+          ["Processing Puzzle (only the original art: image, title, and artist. Figure out how to recode it yourself in Processing! Or just display the original around your home.)","original"],
+          ["Code and ReCode (includes one recoded piece, the original it was modeled on, and its Processing source code. Learn some Processing tricks each time.)","recode"],
+        ]
+      }
+    ]
+  }
+}
