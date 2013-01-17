@@ -2,21 +2,40 @@
 .code {
 	width: 374px; /* pub is 384 */
 	white-space: pre-wrap;
-	font-size: 8px
+	font-size: 6px
 }
 img {
-	width:374;
+	width:150px;
 }
+
+.original {
+	float:left;
+	margin-right: 5px;
+}
+
+.recode {
+	float: left;
+}
+
+.credit {
+	font-size: 10px;
+}
+
 </style>
 
 <div class="piece">
-
+<div class="original">
 <img src="<%= @piece.original_piece_url %>" />
-<p><b><%= @piece.title %></b><br/>
+<p class="credit"><b><%= @piece.title %></b><br/>
 <em><%= @piece.artist %> - <%= @piece.year %></em>	
 </p>
+</div>
+<div class="recode">
 <img src="<%= @piece.recode_image_url %>" />
-<p><em>Recoded by <%= @piece.recoder %></em></p>
+
+<p class="credit"><br /><em>Recoded by <%= @piece.recoder %></em></p>
+</div>
+<br style="clear:both" />
 <div class="code">
 	<%= @piece.recode_source_code %>
 </div>
