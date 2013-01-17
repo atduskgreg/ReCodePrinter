@@ -70,6 +70,7 @@ img {
 		margin-top: 5px;
 		font-size: 12px;
 		font-style: italic;
+		font-weight: bold;
 
 }
 
@@ -89,7 +90,7 @@ img {
 </div>
 <div class="recode">
 <img src="<%= @piece.recode_image_url %>" />
-<p class="credit"><b><%= @piece.title %> by <%= @piece.artist %></b><br/><em>Recoded by <%= @piece.recoder %></em></p>
+<p class="credit"><em>Recoded by <%= @piece.recoder %></em></p>
 
 </div>
 <!--
