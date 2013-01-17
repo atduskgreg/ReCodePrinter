@@ -7,9 +7,9 @@ get '/' do
 	"hello"
 end
 
-get '/edition' do
+get '/edition/' do
 	delivery = 2
-	if params[:delivery_count]
+	if params.keys.include?(:delivery_count)
 		delivery = params[:delivery_count].to_i
 	end
 
@@ -18,7 +18,10 @@ get '/edition' do
 	erb :edition
 end
 
-get '/sample' do
+get '/sample/' do
+	@piece = Piece.first
+	etag @piece.delivery_order
+	erb :edition
 end
 
 get '/all' do
