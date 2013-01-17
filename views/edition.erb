@@ -6,6 +6,9 @@ body {
 	margin-left: 10px;
 	margin-right: 10px;
 		font-family: 'Oxygen Mono', sans-serif;
+		padding-top:10px;
+		padding-bottom: 10px;
+		border: 2px solid #777;
 
 }
 
@@ -14,7 +17,8 @@ body {
 	font-size: 6px
 }
 img {
-	width:300px;
+	width:280px;
+	margin: 0 auto;
 }
 
 .piece {
@@ -61,6 +65,7 @@ img {
 		border-bottom: 2px dotted #000;
 		margin-top: 5px;
 		font-size: 12px;
+		font-style: italic;
 
 }
 
@@ -68,7 +73,7 @@ img {
 </head>
 <body>
 <div id="logo">
-<img src="http://recode-printer.herokuapp.com/icon-2.png"/>
+<img src="http://recode-printer.herokuapp.com/icon-bw.png"/>
 <p>THE RECODE PROJECT <span id="num"><%= @piece.delivery_order %> / 52</span></p>
 </div>
 <div class="piece">
