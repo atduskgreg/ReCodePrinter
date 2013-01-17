@@ -1,13 +1,25 @@
 <style>
+body {
+	width: 384px; /* pub is 384 */
+	margin-left: 10px;
+	margin-right: 10px;
+		font-family: 'Oxygen Mono', sans-serif;
+
+}
+
 .code {
-	width: 374px; /* pub is 384 */
 	white-space: pre-wrap;
 	font-size: 6px
 }
 img {
-	width:150px;
+	width:300px;
 }
 
+.piece {
+	text-align: center;
+}
+
+/*
 .original {
 	float:left;
 	margin-right: 5px;
@@ -16,13 +28,45 @@ img {
 .recode {
 	float: left;
 }
-
+*/
 .credit {
-	font-size: 10px;
+	font-size: 18px;
+}
+
+#logo {
+	width: 374px;
+	margin: 0 auto;
+	border-bottom: 1px dotted black;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+#logo p {
+	margin-bottom: 0px;
+}
+
+#num {
+	font-size: 80%;
+}
+
+#logo img {
+	width: 50px;
+}
+
+#deets {
+	border-top: 2px dotted #000;
+		border-bottom: 2px dotted #000;
+		margin-top: 5px;
+		font-size: 12px;
+
 }
 
 </style>
-
+<div id="logo">
+<img src="/icon.png"/>
+<p>THE RECODE PROJECT <span id="num"><%= @piece.delivery_order %> / 52</span></p>
+</div>
 <div class="piece">
 <div class="original">
 <img src="<%= @piece.original_piece_url %>" />
@@ -32,11 +76,16 @@ img {
 </div>
 <div class="recode">
 <img src="<%= @piece.recode_image_url %>" />
+<p class="credit"><b><%= @piece.title %> by <%= @piece.artist %></b><br/><em>Recoded by <%= @piece.recoder %></em></p>
 
-<p class="credit"><br /><em>Recoded by <%= @piece.recoder %></em></p>
 </div>
+<!--
 <br style="clear:both" />
 <div class="code">
 	<%= @piece.recode_source_code %>
+</div>
+-->
+<div id="deets">
+	<p>MORE ABOUT THIS RECODE: http://bit.ly/rcp1</p>
 </div>
 </div>
