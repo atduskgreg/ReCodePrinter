@@ -8,7 +8,7 @@ require 'dm-types'
 require 'httparty'
 require 'open-uri'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/recode_printer')
+DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_BLUE_URL'] || 'postgres://localhost/recode_printer')
 
 RECODE_DATA_URL = "http://recodeproject.com/data"
 
