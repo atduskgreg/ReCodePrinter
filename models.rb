@@ -62,7 +62,7 @@ class Piece
         :recode_id => recoded["recodes"][0]["id"],
         :recode_created_at => DateTime.parse(recoded["recodes"][0]["timestamp"]),
 
-  			:delivery_order => i+1
+  			:delivery_order => i
   		)
 
   		i = i +1
