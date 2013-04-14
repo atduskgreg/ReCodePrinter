@@ -77,18 +77,18 @@ img {
 </head>
 <body>
 <div id="logo">
-<img src="http://recode-printer.herokuapp.com/icon-bw.png"/>
+<img width="280px" src="http://recode-printer.herokuapp.com/icon-bw.png"/>
 <p>THE RECODE PROJECT <span id="num"><%= @piece.delivery_order %> / 52</span></p>
 </div>
 <div class="piece">
 <div class="original">
-<img class="dither" src="<%= @piece.original_image_url %>" />
+<img class="dither" width="280px" src="<%= @piece.original_image_url %>" />
 <p class="credit"><b><%= @piece.title %></b><br/>
 <em><%= @piece.artist %> - <%= @piece.year %></em>	
 </p>
 </div>
 <div class="recode">
-<img class="dither" src="<%= @piece.recode_image_url %>" />
+<img class="dither" width="280px" src="<%= @piece.recode_image_url %>" />
 <p class="credit"><em>Recoded by<br/><%= @piece.recoder %> - <%= @piece.recode_created_at.strftime("%Y") %></em></p>
 
 </div>
