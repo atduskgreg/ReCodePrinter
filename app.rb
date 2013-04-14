@@ -19,8 +19,8 @@ require './models'
 	end
 	
 	get '/sample/' do
-		@piece = Piece.first :delivery_order => 10
-		etag "sample"+@piece.delivery_order
+		@piece = Piece.first :delivery_order => 3
+		etag "sample#{@piece.delivery_order}"
 		erb :edition
 	end
 	
